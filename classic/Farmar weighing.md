@@ -1,4 +1,8 @@
-#使用1，3，9，27，。。。。的砝码称重，给定n,请选择合适的砝码方案，每个砝码只能选一次
+### 砝码称重
+
+使用1，3，9，27，。。。。的砝码称重，给定n,请选择合适的砝码方案，每个砝码只能选一次
+
+```python
 def get_three_decimal(n):
     strs=""
     while n>0:
@@ -21,3 +25,5 @@ def deal_with(s):
 if __name__ == '__main__':
     print(deal_with(get_three_decimal(10)),sep="")
 
+
+```

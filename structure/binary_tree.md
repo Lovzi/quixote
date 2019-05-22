@@ -23,3 +23,32 @@
 	堆排序步骤：
 	1.堆化 反向调整使得每个子树都是大顶堆
 	2.按序输出元素：把对顶和最末元素对调，然后调整堆顶元素，使得整个子树符合大顶堆的性质
+	
+#树的遍历
+```python
+def in_order(lists,n):  #中序
+    if n>=len(lists):
+        return
+    in_order(lists,2*n+1)
+    print(lists[n],end=' ')
+    in_order(lists,2*n+2)
+def front_order(lists,n):  #前序
+    if n>=len(lists):
+        return
+    print(lists[n],end=' ')
+    front_order(lists,2*n+1)
+    front_order(lists,2*n+2)
+def rear_order(lists,n):  #后序
+    if n>=len(lists):
+        return
+    rear_order(lists,2*n+1)
+    rear_order(lists,2*n+2)
+    print(lists[n],end=' ')
+if __name__ == '__main__':
+    l=[78, 56, 34, 43, 4, 1, 15, 2, 23]
+    in_order(l,0)
+    print()
+    front_order(l,0)
+    print()
+    rear_order(l,0)
+```

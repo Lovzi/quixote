@@ -1,6 +1,3 @@
-# 分析：
-#     快速排序的思路主要是划分
-    #确立一个主元，然后将小于主元的划分到主元的左边，大于主元的划分到主元的右边
 def quick_sort(A,start,end):
     if start >= end:
         return

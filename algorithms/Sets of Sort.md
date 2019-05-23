@@ -5,6 +5,8 @@
 快速排序的思路主要是划分
 
 确立一个主元，然后将小于主元的划分到主元的左边，大于主元的划分到主元的右边
+
+然后递归的对主元左右继续进行划分。
 ```python
 def quick_sort(A,start,end):
     if start >= end:
@@ -14,7 +16,7 @@ def quick_sort(A,start,end):
     quick_sort(A, index-1, end)
 
 
-def position(A,left,right):
+def position(A, left,right):
     key = A[left]
     while left < right:
         while left < right and key >= A[left]:

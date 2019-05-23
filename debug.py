@@ -1,15 +1,18 @@
-# class Solution(object):
-#     def myAtoi(self, strs):
-#         """
-#         :type str: str
-#         :rtype: int
-#         """
-
 class Solution(object):
-    def threeSum(self, nums):
+    def numDecodings(self, s):
         """
-        :type nums: List[int]
-        :rtype: List[List[int]]
+        :type s: str
+        :rtype: int
         """
-        nums.sort()
+        i, ans = 0, 0
+        while i < len(s):
+            if int(s[i:i+2]) > 26:
+                i += 2
+            else:
+                i += 1
+            ans += 1
+        return ans
+
+
+
 

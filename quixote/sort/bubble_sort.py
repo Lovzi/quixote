@@ -13,7 +13,7 @@ def bubble_sort(arr,start=None,count=None):
 
 if __name__ == '__main__':
     nums=[4,5,7,5,4,8,2,1,9,5]
-    nums=bubble_sort(nums,2,3)
+    nums=bubble_sort(nums, 2, 3)
     print(nums)
 
 

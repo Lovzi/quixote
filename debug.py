@@ -97,3 +97,42 @@
 #
 #
 
+class Solution(object):
+    def uniquePaths(self, m, n):
+        """
+        :type m: int
+        :type n: int
+        :rtype: int
+        """
+        dp = [1 for i in range(m)]
+        for i in range(1, n):
+            for j in range(1, m):
+                dp[j] = dp[j-1] + dp[j]
+        return dp[-1]
+
+
+class Solution(object):
+    def uniquePathsWithObstacles(self, obstacleGrid):
+        """
+        :type obstacleGrid: List[List[int]]
+        :rtype: int
+        """
+        r, c = len(obstacleGrid), len(obstacleGrid[0])
+        dp = []
+        flag = 1
+        for i in range(c):
+            if obstacleGrid[0][i]:
+                flag = 0
+            dp.append(flag)
+
+        for i in range(1, r):
+            dp[0] = int(not obstacleGrid[i][0] and dp[0])
+            for j in range(1, c):
+                if obstacleGrid[i][j]:
+                    dp[j] = 0
+                else:
+                    dp[j] = dp[j-1] + dp[j]
+        return dp[-1]
+s = Solution()
+print(s.uniquePathsWithObstacles(
+[[0,1,0,0,0],[1,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]))

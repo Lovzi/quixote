@@ -23,15 +23,3 @@ if __name__ == '__main__':
     nums1=list(range(1000000,0,-1))
     nums2=nums1[:]
     nums3=nums2[:]
-    # import time
-    # t1=time.time()
-    # radix_sort(nums1)
-    # t2=time.time()
-    # print(t2-t1)
-    # # nums2=sorted(nums2)
-    # nums2.sort()
-    # t3=time.time()
-    # print(t3-t2)
-    # import heap_sort
-    # heap_sort.heap_sort(nums3)
-    # print(time.time()-t3)

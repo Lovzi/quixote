@@ -7,6 +7,8 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+    def __repr__(self):
+        return str(self.val)
 
 class Tree(object):
     __metaclass__ = abc.ABCMeta

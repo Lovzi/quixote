@@ -98,3 +98,25 @@
 #
 
 
+class Solution(object):
+    def evalRPN(self, tokens):
+        """
+        :type tokens: List[str]
+        :rtype: int
+        """
+        stack = []
+        operater = {'+', '-', '*', '/'}
+        for c in tokens:
+            if c in operater:
+                end = stack.pop()
+                start = stack.pop()
+                stack.append(str(int(eval(start+c+end))))
+            else:
+                stack.append(c)
+        print(stack)
+        return int(stack[-1])
+
+
+s = Solution()
+print(s.evalRPN(
+ ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]))
